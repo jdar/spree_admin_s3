@@ -1,4 +1,4 @@
-RSpec.describe Spree::Admin::EditorSettingsController, type: :controller do
+RSpec.describe Spree::Admin::S3SettingsController, type: :controller do
   stub_authorization!
 
   before do
@@ -18,7 +18,7 @@ RSpec.describe Spree::Admin::EditorSettingsController, type: :controller do
               enabled: true
               ids: product_description page_body' do
 
-      subject { SpreeEditor::Config }
+      subject { SpreeAdminS3::Config }
 
       it 'sets preferred_current_editor to "CKEditor"' do
         spree_put :update, preferences: { current_editor: 'CKEditor' }

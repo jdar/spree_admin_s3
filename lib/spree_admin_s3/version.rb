@@ -1,7 +1,7 @@
-module SpreeEditor
+module SpreeAdminS3
   module_function
 
-  # Returns the version of the currently loaded SpreeEditor as a
+  # Returns the version of the currently loaded SpreeAdminS3 as a
   # <tt>Gem::Version</tt>.
   def version
     Gem::Version.new VERSION::STRING

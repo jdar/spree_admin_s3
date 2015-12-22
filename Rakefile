@@ -10,6 +10,6 @@ task default: :spec
 
 desc 'Generates a dummy app for testing'
 task :test_app do
-  ENV['LIB_NAME'] = 'spree_editor'
+  ENV['LIB_NAME'] = 'spree_admin_s3'
   Rake::Task['common:test_app'].invoke
 end

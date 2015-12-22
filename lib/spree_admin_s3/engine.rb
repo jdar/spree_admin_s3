@@ -1,13 +1,13 @@
-module SpreeEditor
+module SpreeAdminS3
   class Engine < Rails::Engine
     isolate_namespace Spree
-    engine_name 'spree_editor'
+    engine_name 'spree_admin_s3'
 
-    initializer 'spree_editor.preferences', before: :load_config_initializers do
-      SpreeEditor::Config = Spree::EditorSetting.new
+    initializer 'spree_admin_s3.preferences', before: :load_config_initializers do
+      SpreeAdminS3::Config = Spree::S3Setting.new
 
       if Spree::Config.has_preference? :show_raw_product_description
-        Spree::Config[:show_raw_product_description] = SpreeEditor::Config[:enabled]
+        Spree::Config[:show_raw_product_description] = SpreeAdminS3::Config[:enabled]
       end
     end
 

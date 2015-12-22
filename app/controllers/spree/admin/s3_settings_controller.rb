@@ -1,8 +1,8 @@
 module Spree
   module Admin
-    class EditorSettingsController < ResourceController
+    class S3SettingsController < ResourceController
       def update
-        config = Spree::EditorSetting.new
+        config = Spree::S3Setting.new
         preferences = params && params.key?(:preferences) ? params.delete(:preferences) : params
         preferences.each do |name, value|
           next unless config.has_preference? name
