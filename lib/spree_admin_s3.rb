@@ -1,7 +1,3 @@
-require 'ckeditor'
-require 'coffee_script'
-require 'sass/rails'
-require 'spree_core'
+require 'solidus_core'
 require 'spree_admin_s3/version'
 require 'spree_admin_s3/engine'
-require 'tinymce-rails'
